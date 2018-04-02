@@ -3,6 +3,9 @@ def best_stock(data):
         if v == max(data.values()):
             return k
 
+def best_stock2(data):
+    i = max(data.items(), key=lambda x: x[1])
+    return i[0]
 
 if __name__ == '__main__':
     print("Example:")
