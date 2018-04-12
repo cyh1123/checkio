@@ -10,7 +10,7 @@ def checkio(opacity):
         else:
             temp += 1
         if y >= 5000:
-            return
+            return None
     return y
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
