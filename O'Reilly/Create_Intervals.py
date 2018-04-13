@@ -4,12 +4,12 @@ def create_intervals(data):
     """
     ans = []
     if data:
-        start, end = min(data), max(data)
-        for i in range(start, end+1):
+        begin, end = min(data), max(data)
+        for i in range(begin, end+1):
             if i in data and i+1 not in data:
-                ans.append((start, i))
+                ans.append((begin, i))
             if i not in data and i+1 in data:
-                start = i+1
+                begin = i+1
     return ans
 
 if __name__ == '__main__':
