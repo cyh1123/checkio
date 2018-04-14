@@ -1,6 +1,6 @@
 def from_camel_case(name):
-    for letter in name:
-        if letter.isupper() and name.index(letter) != 0:
+    for letter in name[1:]:
+        if letter.isupper():
             name = name.replace(letter, '_'+letter)
     return name.lower()
 
