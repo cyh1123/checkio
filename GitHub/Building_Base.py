@@ -1,23 +1,23 @@
 class Building:
     def __init__(self, south, west, width_WE, width_NS, height=10):
-        self.__south, self.__west, self.__width_WE, self.__width_NS, self.__height = south, west, width_WE, width_NS, height
+        self._south, self._west, self._width_WE, self._width_NS, self._height = south, west, width_WE, width_NS, height
 
     def corners(self):
         coordinates = dict()
-        coordinates['north-west'] = [self.__south + self.__width_NS, self.__west]
-        coordinates['north-east'] = [self.__south + self.__width_NS, self.__west + self.__width_WE]
-        coordinates['south-west'] = [self.__south, self.__west]
-        coordinates['south-east'] = [self.__south, self.__west + self.__width_WE]
+        coordinates['north-west'] = [self._south + self._width_NS, self._west]
+        coordinates['north-east'] = [self._south + self._width_NS, self._west + self._width_WE]
+        coordinates['south-west'] = [self._south, self._west]
+        coordinates['south-east'] = [self._south, self._west + self._width_WE]
         return coordinates
 
     def area(self):
-        return self.__width_WE * self.__width_NS
+        return self._width_WE * self._width_NS
 
     def volume(self):
-        return self.area() * self.__height
+        return self.area() * self._height
 
     def __repr__(self):
-        return 'Building({}, {}, {}, {}, {})'.format(self.__south, self.__west, self.__width_WE, self.__width_NS, self.__height)
+        return 'Building({_south}, {_west}, {_width_WE}, {_width_NS}, {_height})'.format(**self.__dict__)
 
 
 if __name__ == '__main__':
