@@ -17,5 +17,6 @@ def power_supply(connections, power_plants):
 
 if __name__ == '__main__':
     assert power_supply([['p1', 'c1'], ['c1', 'c2']], {'p1': 1}) == set(['c2'])
+    # 'с' == 'c' returns False
     assert power_supply([['c0', 'c1'], ['c1', 'p1'], ['c1', 'c3'], ['p1', 'c4']], {'p1': 1}) == set(['c0', 'c3'])
     assert power_supply([['p1', 'c1'], ['c1', 'c2'], ['c2', 'c3']], {'p1': 3}) == set([])
